@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade_Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<body onload="setUpPage()">
+
+<div id='Title'><p>Grade Calculator</p></div>
+
+
+
+<table id="table1" border=”1”>
+    <tr>
+        <td><p>Homework Points:</p><input id="1,1" type="text"/></td>
+        <td><p>Homework Weight %:</p><input id="1,2" type="number" onChange="finalWeight('1,2')"/></td>
+        <td id="1,1,3">Grade:</td>
+    </tr>
+
+    <tr>
+        <td><p>Classwork Points:</p><input id="2,1" type="text"/></td>
+        <td><p>Classwork Weight %:</p><input id="2,2" type="number" onChange="finalWeight('2,2')"/></td>
+        <td id="2,1,3">Grade:</td>
+    </tr>
+
+    <tr>
+        <td><p>Test Points:</p><input id="3,1" type="text"/></td>
+        <td><p>Test Weight %:</p><input id="3,2" type="number" onChange="finalWeight('3,2')"/></td>
+        <td id="3,1,3">Grade:</td>
+    </tr>
+</table>
+
+<table id="table2" border=”1”>
+    <tr>
+        <td><p>Grade desired:</p><input onchange="gradeDesiredErrors()" id="4,1" type="number"/></td>
+        <td id="finalWeight"><p>Final Weight %:</p></td>
+    </tr>
+</table>
+
+<button onClick="calculateGrades()" id="firstButton">Calculate</button>
+
+<div id="resultGrades"></div>
+
+</body>
+</html>
